@@ -18,6 +18,6 @@ after_success:
   - docker build -t asinghde/multi-server ./server
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   - docker push asinghde/multi-client
-  - docker push asinghde/multi-server
   - docker push asinghde/multi-worker
   - docker push asinghde/multi-nginx
+  - docker push asinghde/multi-server
